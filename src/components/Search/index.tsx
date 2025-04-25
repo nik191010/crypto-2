@@ -6,7 +6,7 @@ import { RxCross1 } from 'react-icons/rx';
 import styles from './Search.module.scss';
 
 const Search: React.FC = () => {
-  const { setSearch } = useContext(AppContext);
+  const { setSearch } = useContext(AppContext)!;
 
   const [value, setValue] = useState<string>('');
   const inputRef = useRef<HTMLInputElement>(null); // Typing the ref as HTMLInputElement

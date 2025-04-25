@@ -47,12 +47,8 @@ interface CoinChartData {
   prices?: [number, number][];
 }
 
-interface Params {
-  coinId?: string;
-}
-
 const HistoryChart: React.FC = () => {
-  const { coinId } = useParams<Params>();
+  const { coinId } = useParams<{ coinId: string }>();
   const [chartData, setChartData] = React.useState<CoinChartData>({});
   const [days, setDays] = React.useState<number | string>(1);
   const [format, setFormat] = React.useState<string>('H:mm');
@@ -119,10 +115,7 @@ const HistoryChart: React.FC = () => {
             }
             return label;
           },
-          labelColor: function (
-            this: TooltipModel<'line'>,
-            tooltipItem: TooltipItem<'line'>,
-          ) {
+          labelColor: function (this: TooltipModel<'line'>) {
             return {
               backgroundColor: '#ff9332',
               borderColor: '#ff9332',
