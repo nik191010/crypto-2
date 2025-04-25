@@ -1,0 +1,63 @@
+@use '../../scss/variables' as *;
+@use '../../scss/container' as *;
+@use '../../scss/media' as *;
+@use '../../scss/reset' as *;
+
+.about {
+  padding-bottom: 50px;
+  p {
+    padding-bottom: 10px;
+    color: #b3b3b3;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 1.2;
+    @include for767 {
+      font-size: 18px;
+    }
+    // &:not(:nth-of-type(1)) {
+    //   &.hidden {
+    //     display: none;
+    //   }
+    // }
+  }
+  a {
+    color: #fff;
+  }
+}
+
+.readMore {
+  border: 1px solid transparent;
+  background: #0d0d0d;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.02);
+  border-radius: 16px;
+  padding: 30px;
+  @include for767 {
+    padding: 15px;
+  }
+  @include for479 {
+    padding: 15px 10px;
+  }
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  @include for479 {
+    font-size: 18px;
+  }
+}
+
+.expandingText {
+  overflow: hidden;
+  transition: max-height 1s ease-in-out 0s;
+}
+
+.showMore {
+  display: block;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 18px;
+  color: #fff;
+  margin-top: 15px;
+}

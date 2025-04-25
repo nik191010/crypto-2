@@ -1,0 +1,107 @@
+@mixin for3840m {
+  @media (min-width: 3840px) {
+    @content;
+  }
+}
+
+@mixin for2560m {
+  @media (min-width: 2560px) {
+    @content;
+  }
+}
+
+@mixin for1560 {
+  @media (max-width: 1560px) {
+    @content;
+  }
+}
+
+@mixin for1440 {
+  @media (max-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin for1220 {
+  @media (max-width: 1220px) {
+    @content;
+  }
+}
+
+@mixin for1040 {
+  @media (max-width: 1040px) {
+    @content;
+  }
+}
+
+@mixin for991 {
+  @media (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin for960 {
+  @media (max-width: 960px) {
+    @content;
+  }
+}
+
+@mixin for880 {
+  @media (max-width: 880px) {
+    @content;
+  }
+}
+
+@mixin for767 {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin for620 {
+  @media (max-width: 620px) {
+    @content;
+  }
+}
+
+@mixin for510 {
+  @media (max-width: 510px) {
+    @content;
+  }
+}
+
+@mixin for479 {
+  @media (max-width: 479px) {
+    @content;
+  }
+}
+
+@mixin for440 {
+  @media (max-width: 440px) {
+    @content;
+  }
+}
+
+@mixin for360 {
+  @media (max-width: 360px) {
+    @content;
+  }
+}
+
+@mixin for320 {
+  @media (max-width: 320px) {
+    @content;
+  }
+}
+
+@mixin foripadPro {
+  @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+    @content;
+  }
+}
+
+@mixin foripadMini {
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    @content;
+  }
+}

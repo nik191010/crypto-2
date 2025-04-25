@@ -1,0 +1,95 @@
+@use '../../scss/variables' as *;
+@use '../../scss/container' as *;
+@use '../../scss/media' as *;
+@use '../../scss/reset' as *;
+
+.root {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 70px;
+  padding-bottom: 25px;
+
+  li {
+    &:first-child,
+    &:last-child {
+      position: absolute;
+      @include for479 {
+        display: none;
+      }
+      a {
+        margin: 0;
+        text-transform: uppercase;
+        color: #fff;
+        width: 100%;
+        height: auto;
+        padding: 0;
+        &:hover {
+          background: 0;
+        }
+      }
+    }
+    &:first-child {
+      left: 0;
+      > a {
+        span {
+          display: flex;
+        }
+        svg {
+          width: 100%;
+          padding-right: 10px;
+        }
+      }
+    }
+    &:last-child {
+      right: 0;
+      > a {
+        span {
+          display: flex;
+        }
+        svg {
+          width: 100%;
+          padding-left: 10px;
+        }
+      }
+    }
+
+    a {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 10px;
+      height: 10px;
+      padding: 20px;
+      border-radius: 50%;
+      margin-right: 10px;
+      cursor: pointer;
+      color: #696969;
+      @include for767 {
+        font-size: 12px;
+        padding: 12px;
+      }
+      &:hover {
+        background: #1a1a1a;
+      }
+    }
+  }
+  :global {
+    .selected {
+      a {
+        background: #ff9332;
+        color: #000;
+        &:hover {
+          background: #ff9332;
+        }
+      }
+    }
+    li.disabled {
+      a {
+        color: #999;
+      }
+    }
+  }
+}

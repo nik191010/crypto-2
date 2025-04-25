@@ -1,0 +1,117 @@
+@use '../../scss/variables' as *;
+@use '../../scss/container' as *;
+@use '../../scss/media' as *;
+@use '../../scss/reset' as *;
+
+.row {
+  cursor: pointer;
+  &:hover {
+    background: #0d0d0d;
+  }
+}
+
+.cell {
+  padding: 12px;
+  vertical-align: middle;
+  @include for479 {
+    padding: 12px 5px;
+  }
+
+  &:nth-child(1) {
+    text-align: center;
+    color: $grey;
+  }
+  &:nth-child(2) {
+    text-align: left;
+  }
+  &:nth-child(3) {
+    text-align: right;
+  }
+  &:nth-child(4) {
+    text-align: right;
+  }
+  &:nth-child(5) {
+    text-align: center;
+    color: $grey;
+    font-weight: 400;
+    @include for767 {
+      display: none;
+    }
+  }
+  &:nth-child(6) {
+    text-align: right;
+    color: $grey;
+    font-weight: 400;
+    @include for767 {
+      display: none;
+    }
+  }
+}
+
+.logo {
+  font-size: 20px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  @include for767 {
+    color: $grey;
+  }
+  @include for479 {
+    font-size: 14px;
+  }
+}
+
+.pic {
+  width: 35px;
+  height: 35px;
+  margin-right: 15px;
+  @include for479 {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+  }
+}
+
+.logoText {
+  font-weight: 500;
+  @include for479 {
+    font-size: 14px;
+  }
+  & > span {
+    font-weight: 300;
+    color: #737373;
+    @include for767 {
+      display: none;
+    }
+  }
+}
+
+.change {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 6px;
+  border-radius: 12px;
+  font-weight: 700;
+  line-height: 1.5;
+  @include for479 {
+    font-size: 10px;
+  }
+}
+
+.up {
+  background: $green;
+  color: $text-green;
+}
+
+.down {
+  background: $light-red;
+  color: $red;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}

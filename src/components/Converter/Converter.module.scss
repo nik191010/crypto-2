@@ -1,0 +1,186 @@
+@use '../../scss/variables' as *;
+@use '../../scss/container' as *;
+@use '../../scss/media' as *;
+@use '../../scss/reset' as *;
+
+.converter {
+  margin-bottom: 80px;
+  @include for767 {
+    margin-bottom: 50px;
+  }
+}
+.title {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 40px 0;
+  @include for479 {
+    font-size: 18px;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 8px 12px;
+  @include for767 {
+    flex-direction: column;
+  }
+}
+
+.converterInput {
+  width: 50%;
+  position: relative;
+  border: 1px solid #0d0d0d;
+  border-radius: 16px;
+  @include for767 {
+    width: 100%;
+  }
+  &:first-child {
+    border-radius: 16px 0 0 16px;
+    border-right: 0;
+    @include for767 {
+      border-radius: 16px 16px 0 0;
+      border-right: 1px solid #0d0d0d;
+      border-bottom: 0;
+    }
+  }
+  &:last-child {
+    border-radius: 0 16px 16px 0;
+    border-left: 0;
+    @include for767 {
+      border-radius: 0 0 16px 16px;
+      border-left: 1px solid #0d0d0d;
+      border-top: 0;
+    }
+    .csInputWrapper {
+      background: #1a1a1a;
+    }
+  }
+}
+
+.parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  height: 78px;
+  background-color: #0d0d0d;
+  border-radius: inherit;
+  border: 0;
+  img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
+
+.childComponent {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  p {
+    font-size: 20px;
+    color: #ccc;
+    padding-left: 10px;
+    padding-right: 5px;
+    @include for479 {
+      font-size: 14px;
+      padding-left: 7px;
+      padding-right: 3px;
+    }
+  }
+}
+
+.selectElement {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 12px 12px 30px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 500;
+  cursor: pointer;
+  z-index: 5;
+  @include for479 {
+    padding: 12px;
+  }
+}
+
+.selectValues {
+  position: absolute;
+  width: 100%;
+  border: 1px solid #0d0d0d;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 16px 16px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  overflow: hidden;
+  background: #080808;
+  z-index: 5;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.selectOption {
+  padding: 16px 12px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out 0s;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.dropDownElement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
+
+.csInputWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.csInput {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0 30px 0 140px;
+  top: 0;
+  left: 0;
+  font-size: 29px;
+  font-weight: 500;
+  border-radius: 0;
+  border: 0;
+  text-align: right;
+  color: #fff;
+  background: none;
+  @include for479 {
+    font-size: 18px;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.iconDown {
+  transition: transform 0.5s ease 0s;
+  &.rotated {
+    transform: rotate(180deg);
+  }
+}

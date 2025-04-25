@@ -1,0 +1,16 @@
+// COLORS
+$black: #000;
+$white: #e5e5e5;
+$grey: #bfbfbf;
+$light-grey: #8c8c8c;
+$dark-grey: #1a1a1a;
+$light-green: rgba(50, 215, 75, 0.1);
+$text-green: #6ccf59;
+$green: rgba(8, 209, 88, 0.1);
+$light-red: rgba(255, 68, 68, 0.1);
+$red: #ff4d4d;
+
+// TRANSITION
+@mixin mt($time) {
+  transition: all $time ease;
+}

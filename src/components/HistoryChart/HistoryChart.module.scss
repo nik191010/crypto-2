@@ -1,0 +1,46 @@
+@use '../../scss/variables' as *;
+@use '../../scss/container' as *;
+@use '../../scss/media' as *;
+@use '../../scss/reset' as *;
+
+.root {
+  display: flex;
+  flex-direction: column;
+  background: #0d0d0d;
+  border-radius: 24px;
+  border: 1px solid transparent;
+  justify-content: space-between;
+  @include for767 {
+    margin-bottom: 20px;
+  }
+}
+
+.chartWrap {
+  padding-left: 5px;
+  padding-bottom: 30px;
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1a1a1a;
+  padding: 12px 20px;
+  border-radius: 0px 0px 24px 24px;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.item {
+  font-size: 16px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #b3b3b3;
+  @include for479 {
+    font-size: 12px;
+  }
+  &_active {
+    color: #fff;
+  }
+}

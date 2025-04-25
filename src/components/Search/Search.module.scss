@@ -1,0 +1,76 @@
+@use '../../scss/variables' as *;
+@use '../../scss/container' as *;
+@use '../../scss/media.scss' as *;
+@use '../../scss/reset' as *;
+
+.search {
+  position: relative;
+  text-align: center;
+  margin: 40px auto 80px;
+  max-width: 320px;
+  @include for479 {
+    margin-bottom: 50px;
+  }
+  @include for320 {
+    margin-bottom: 40px;
+  }
+}
+
+.input {
+  border: 1px solid #7a7a7a80;
+  box-shadow: rgba(255, 255, 255, 0.27) 0px 0px 0.25em,
+    rgba(253, 253, 253, 0.05) 0px 0.25em 1em;
+  background: transparent;
+  padding: 12px 20px;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 16px;
+  padding-left: 42px;
+  transition: all 0.15s ease-in-out;
+  color: #fff;
+  &:focus {
+    background: $dark-grey;
+    border: 1px solid #323131;
+    color: #ede8e8;
+    outline: none;
+  }
+  &::placeholder {
+    color: $grey;
+  }
+  @include for479 {
+    font-size: 14px;
+  }
+}
+
+.icon {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  path {
+    fill: #8a8a8a;
+  }
+}
+
+.clearIcon {
+  width: 17px;
+  height: 17px;
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  opacity: 0;
+  pointer-events: none;
+  @include mt(0.5s);
+  path {
+    fill: #ff9332;
+  }
+  &_active {
+    opacity: 1;
+    pointer-events: auto;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

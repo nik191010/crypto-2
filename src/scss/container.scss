@@ -1,0 +1,15 @@
+@use './media' as *;
+
+@mixin container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @include for960 {
+    max-width: 890px;
+  }
+
+  @include for767 {
+    max-width: none;
+  }
+}
