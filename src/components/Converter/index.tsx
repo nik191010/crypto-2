@@ -75,7 +75,7 @@ const Converter: React.FC<ConverterProps> = ({
       .catch((error) => {
         console.log(error);
       });
-  }, [currentPriceConverter]); // Depend on currentPriceConverter instead
+  }, [currentPriceConverter]); // Depend on currentPriceConverter instead 1
 
   const filterItems = (items: string[]): string[] => {
     return items.filter((item) => !removeList.includes(item));
