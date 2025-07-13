@@ -62,7 +62,7 @@ const Converter: React.FC<ConverterProps> = ({
     const currenciesForFlags: string[] = filterItems(
       Object.keys(currentPriceConverter),
     ).map((item) => item.toUpperCase().slice(0, -1));
-
+    console.log(Object.keys(currentPriceConverter));
     axios
       .get<Flag[]>(import.meta.env.VITE_API_FLAGS_URL as string)
       .then((response) => {
